@@ -1,0 +1,13 @@
+#!/bin/bash
+set -e
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$APPDIR/usr/lib/
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$APPDIR/usr/x86_64-linux-gnu
+export PATH=$APPDIR/usr/bin:$APPDIR/bin
+echo "-------------------------------------------------------------------------"
+echo "PATH $PATH"
+echo "-------------------------------------------------------------------------"
+echo "LD_LIBRARY_PATH $LD_LIBRARY_PATH"
+echo "-------------------------------------------------------------------------"
+python3 --version
+echo-cli "foo"
+helloworld
